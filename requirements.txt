@@ -6,3 +6,4 @@ numpy
 accelerate
 bitsandbytes
 torch
+einops
