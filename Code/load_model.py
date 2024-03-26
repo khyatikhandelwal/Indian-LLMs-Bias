@@ -16,7 +16,7 @@ class Load_Model:
         from huggingface_hub.hf_api import HfFolder
 
         # Save the Hugging Face API token
-        HfFolder.save_token('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')
+        HfFolder.save_token(YOUR_TOKEN_HERE)
 
         from transformers import AutoModelForCausalLM, AutoTokenizer
         # model_name = "gpt2"
