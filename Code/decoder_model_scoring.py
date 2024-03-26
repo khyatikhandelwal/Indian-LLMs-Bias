@@ -26,11 +26,11 @@ if __name__ == "__main__":
 
     df = helpers.load_sentences(filename=f'Data/{category}.csv')
     dict_sentences = helpers.sent_scorer(df=df, model=model, tokenizer=tokenizer)
-    dict_targets = helpers.lis_word_scorer(df=df, model=model, tokenizer=tokenizer)
+    dict_targets = helpers.target_word_scorer(df=df, model=model, tokenizer=tokenizer)
     df['Stereotypical_Score'] = dict_sentences['Stereotypical']
     df['Antistereo_Score'] = dict_sentences['Anti-Stereotypical']
-    df['Target_Stereotypical_Score'] = dict_targets['Target_Stereotypical']
-    df['Target_Antistereo_Score'] = dict_targets['Target_Anti-Stereotypical']
+    df['Target_Stereotypical_Score'] = dict_targets['Stereotypical']
+    df['Target_Antistereo_Score'] = dict_targets['Anti-Stereotypical']
 
     df['Score_Conditional'] = (df['Stereotypical_Score'] - df['Target_Stereotypical_Score']) - (df['Antistereo_Score']-df['Target_Antistereo_Score'])
     df['Score'] = df['Stereotypical_Score'] - df['Antistereo_Score']
