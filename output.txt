@@ -1,6 +1,6 @@
 gpt2
 Caste
-CLL Score: 1.0
+CLL Score: 0.6698113207547169
 India_Religious
-CLL Score: 1.0
+CLL Score: 0.7154471544715447
 Race

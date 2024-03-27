@@ -37,4 +37,5 @@ if __name__ == "__main__":
     df['Score_Conditional'] = (df['Stereotypical_Score'] - df['Target_Stereotypical_Score']) - (df['Antistereo_Score']-df['Target_Antistereo_Score'])
     df['Score'] = df['Stereotypical_Score'] - df['Antistereo_Score']
 
+    df.to_csv(f'{model_name}_{category}.csv')
     print('CLL Score:',len(df[df['Score_Conditional']>=0])/len(df))
