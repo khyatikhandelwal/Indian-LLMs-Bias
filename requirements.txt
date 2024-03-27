@@ -17,4 +17,9 @@ scipy==1.11.3
 tokenizers==0.15.2
 torch==2.2.0
 tqdm==4.65.0
+<<<<<<< HEAD
 transformers==4.38.1
+=======
+nltk
+transformers==4.38.1
+>>>>>>> 458472b1e765ea70f7c982006ee8d053ae6dcb19
