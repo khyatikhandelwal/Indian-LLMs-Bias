@@ -168,6 +168,6 @@ class Helpers:
         df['Anti-Stereotypical'] = df.apply(lambda x: self.fill_masks(x['Sentence'],x['Target_Anti-Stereotypical']),axis=1)
         if instruction_prompting == True:
             df['Stereotypical'] = df['Stereotypical'].apply(lambda x: prompt + x)
-            df['Anti-Stereotypical'] = df['Anti-Stereotypical'].apply(lambda x: x.replace(prompt, ''))
+            df['Anti-Stereotypical'] = df['Anti-Stereotypical'].apply(lambda x: prompt + x)
         #print("DF HEAD:", df.head())
         return df
